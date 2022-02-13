@@ -14,16 +14,23 @@ class App extends React.Component {
     this.setState({ cards: response.data.data });
   };
 
+  onCardSelect = (card) => {
+    this.setState({ selectedCard: card });
+  };
+
   render() {
     return (
       <div className="ui container" style={{ marginTop: "10px" }}>
         <SearchBar onSubmit={this.onSearchSubmit} />
         <div className="ui grid">
           <div className="ui eleven wide column grid">
-            <CardList cards={this.state.cards} />
+            <CardList
+              onCardSelect={this.onCardSelect}
+              cards={this.state.cards}
+            />
           </div>
           <div className="ui segment five wide column">
-            <CardDetail />
+            <CardDetail card={this.state.selectedCard} />
           </div>
         </div>
       </div>

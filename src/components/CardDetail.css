@@ -1,0 +1,8 @@
+.card-detail {
+    position: fixed;
+}
+
+.card-detail img {
+    max-width: 78%;
+    max-height: 100%;
+}

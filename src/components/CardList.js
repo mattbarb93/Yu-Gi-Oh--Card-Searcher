@@ -1,15 +1,12 @@
 import React from "react";
+import CardItem from "./CardItem";
 
-const CardList = ({ cards }) => {
+const CardList = ({ cards, onCardSelect }) => {
   if (cards.length === 0) {
     return <div>Number of results: 0</div>;
   }
   const renderedList = cards.map((card) => {
-    return (
-      <div className="five wide column" key={card.id}>
-        <img alt={card.name} src={card.card_images[0].image_url_small} />
-      </div>
-    );
+    return <CardItem key={card.id} onCardSelect={onCardSelect} card={card} />;
   });
   return (
     <div>
