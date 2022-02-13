@@ -17,8 +17,7 @@ const CardList = ({ cards }) => {
         Your search returned {cards.length} results:
       </div>
       <div className="ui grid">
-        <div className="ui eleven wide column grid">{renderedList}</div>
-        <div className="ui segment five wide column">Card Info</div>
+        <div className="ui column grid">{renderedList}</div>
       </div>
     </div>
   );
