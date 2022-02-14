@@ -3,7 +3,10 @@
 }
 
 .card-detail img {
-    max-width: 78%;
+    height: 100%;
+    /* position: fixed;  TODO: figure out the fixed position, and not break the styling */
+    width: 100%;
+    object-fit: contain;
     max-height: 100%;
 }
 
