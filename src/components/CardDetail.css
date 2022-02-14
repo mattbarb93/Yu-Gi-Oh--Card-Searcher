@@ -6,3 +6,9 @@
     max-width: 78%;
     max-height: 100%;
 }
+
+.card-detail-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

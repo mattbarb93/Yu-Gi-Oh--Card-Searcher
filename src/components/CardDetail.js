@@ -8,6 +8,10 @@ const CardDetail = ({ card }) => {
   return (
     <div className="card-detail">
       <img alt={card.name} src={card.card_images[0].image_url} />
+      <div className="card-detail-name">{card.name}</div>
+      <div className="card-detail-name">
+        {card.atk}/{card.def}
+      </div>
     </div>
   );
 };
